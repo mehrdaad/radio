@@ -3,6 +3,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub version](https://badge.fury.io/gh/farskid%2Fradio.svg)](https://badge.fury.io/gh/farskid%2Fradio)
 
+
 Electron applicatio for playin persian music as an internet radio.
 
 >NOTE: If you're a designer or know your way around logo design, feel free to open an issue for designing a brand new logo for Radio.
