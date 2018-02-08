@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Radio</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+  var electron = require('electron');
+  var ipc = electron.ipcRenderer;
+  var constants = require('./src/constants');
+
+  var audio = new Audio(constants.RADIO_URL);
+
+  audio.play().then(function () {
+    ipc.send('INIT');
+  });
+
+  ipc.on('TOGGLE_STATUS', function (evt) {
+    if (audio.paused) {
+      audio.play();
+      ipc.send('TOGGLE_STATUS', true);
+    }
+    else {
+      audio.pause();
+      ipc.send('TOGGLE_STATUS', false);
+    }
+  })
+</script>
+
+</html>

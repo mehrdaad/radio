@@ -1,0 +1,27 @@
+{
+  "name": "radio",
+  "description": "Iranian pop music, radio station",
+  "version": "0.1.0",
+  "main": "main.js",
+  "keywords": ["electron", "music", "pop", "iranian music"],
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "deploy:local":
+      "rm -rf /Applications/radio.app/ &&  cp -r dist/mac/radio.app /Applications/"
+  },
+  "build": {
+    "appId": "io.github.radio",
+    "mac": {
+      "category": "public.app-category.music",
+      "extendInfo": {
+        "LSUIElement": 1
+      }
+    }
+  },
+  "author": "Farzad YZ <farskid@gmail.com>",
+  "devDependencies": {
+    "electron": "^1.7.12",
+    "electron-builder": "^19.55.3"
+  }
+}
